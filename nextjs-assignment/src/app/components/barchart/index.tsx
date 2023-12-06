@@ -1,4 +1,5 @@
 "use client";
+import type { InferGetStaticPropsType, GetStaticProps } from 'next'
 import { useState, useEffect, useCallback } from "react"
 import styles from './BarChart.module.css'
 import { Bar } from "react-chartjs-2"
@@ -21,6 +22,16 @@ chartJS.register(
     Legend
 
 )
+export const getStaticProps = async () => {
+    const url = 'https://api.porssisahko.net/v1/latest-prices.json';
+    const response = await fetch(url);
+    const data = await response.json()
+    console.log(data)
+    
+    return {
+    props: {prices: data}    
+    }
+}
 
 export default function BarChart () {
 
@@ -64,6 +75,8 @@ export default function BarChart () {
     )
 
 }
+
+
 async function getData() {
     const apiURL= "https://api.porssisahko.net/v1/latest-prices.json";
     const response = await fetch(apiURL)
