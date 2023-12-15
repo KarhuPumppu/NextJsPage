@@ -3,7 +3,7 @@ const nextConfig = {
     return [
       {
         source: '/api/:path*',
-        destination: 'https://api.porssisahko.net/v1/:path*',
+        destination: 'https://api.porssisahko.net/v1/latest-prices.json',
       }
     ]
   }

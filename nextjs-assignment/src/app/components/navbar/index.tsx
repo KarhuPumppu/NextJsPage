@@ -11,17 +11,17 @@ const Navbar = () => {
             <ul className="hidden md:flex gap-x-6 text-white">
               <li>
                 <Link href="/">
-                  <p>Home</p>
+                  <p>Today</p>
                 </Link>
               </li>
               <li>
-                <Link href="/about">
-                  <p>About Us</p>
+                <Link href="/nextDay">
+                  <p>Next Day</p>
                 </Link>
               </li>
               <li>
-                <Link href="/contacts">
-                  <p>Contacts</p>
+                <Link href="/previousDay">
+                  <p>Previous Day</p>
                 </Link>
               </li>
             </ul>

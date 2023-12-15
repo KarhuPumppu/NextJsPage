@@ -1,6 +1,6 @@
 import App from "next/app";
-import BarChart from "./components/barchart";
-import Navbar from "./components/navbar";
+import BarChartNextDay from "../components/barchart";
+
 
 
 export default function Home() {
@@ -9,7 +9,7 @@ export default function Home() {
     <>
       <div className="container mx-auto px-4">
       
-        <BarChart/>
+        <BarChartNextDay/>
       </div>
     </>
   );
